@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 const ChatContainer = () => {
   const [user, setUser] = useState(localStorage.getItem("user"));
   const [chat, setChat] = useState([]);
-  const socket = socketIoClient("https://ahamadravkuda.netlify.app:2000");
+  const socket = socketIoClient("https://ahamadravkuda.netlify.app");
   const navigate = useNavigate();
 
   useEffect(() => {
