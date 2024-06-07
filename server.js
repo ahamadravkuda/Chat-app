@@ -8,7 +8,9 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: 'https://ahamadravkuda.netlify.app',
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type']
   },
 });
 io.on("connection", (socket) => {
@@ -21,6 +23,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(2000,'0.0.0.0', () => {
+server.listen(2000, () => {
   console.log("running on 2000 PORT");
 });
