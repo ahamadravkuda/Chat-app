@@ -21,6 +21,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen("2000", () => {
+server.listen(2000,'0.0.0.0', () => {
   console.log("running on 2000 PORT");
 });
