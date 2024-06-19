@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 const ChatContainer = () => {
   const [user, setUser] = useState(localStorage.getItem("user"));
   const [chat, setChat] = useState([]);
-  const socket = socketIoClient(https://chat-app-backend-di64.onrender.com);
+  const socket = socketIoClient("https://chat-app-backend-di64.onrender.com");
   const navigate = useNavigate();
 
   useEffect(() => {
